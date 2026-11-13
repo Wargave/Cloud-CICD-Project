@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Портфолио IT-специалиста | Cloud CI/CD Project</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <div>
+        <p class="badge">CI/CD • GitHub Actions • GitHub Pages</p>
+        <h1 id="site-title">Портфолио IT-специалиста</h1>
+        <p class="subtitle">
+          Разработка веб-приложений, администрирование баз данных и автоматизация развёртывания в облаке.
+        </p>
+      </div>
+      <button id="theme-toggle" class="btn-outline" type="button" aria-label="Переключить тему">
+        Светлая тема
+      </button>
+    </div>
+  </header>
+
+  <main class="container">
+    <section id="about" class="card">
+      <h2>О специалисте</h2>
+      <p>
+        Специализируюсь на проектировании информационных систем, работе с реляционными базами данных
+        и настройке автоматизированных конвейеров CI/CD для облачных веб-приложений.
+      </p>
+      <div class="stats-grid">
+        <div class="stat-item">
+          <span class="stat-value">4+</span>
+          <span class="stat-label">года обучения и практики</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">10+</span>
+          <span class="stat-label">технологий в стеке</span>
+        </div>
+        <div class="stat-item">
+          <span class="stat-value">100%</span>
+          <span class="stat-label">автодеплой через Actions</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="card">
+      <h2>Ключевые навыки</h2>
+      <div class="skills-list">
+        <span class="chip">HTML5 / CSS3 / JS</span>
+        <span class="chip">Python</span>
+        <span class="chip">Java</span>
+        <span class="chip">SQL / PostgreSQL</span>
+        <span class="chip">Linux</span>
+        <span class="chip">Docker</span>
+        <span class="chip">Git &amp; GitHub Actions</span>
+      </div>
+    </section>
+
+    <section id="projects" class="card">
+      <div class="section-head">
+        <h2>Проекты</h2>
+        <div class="filter-group" role="group" aria-label="Фильтр проектов">
+          <button class="filter-btn active" data-filter="all" type="button">Все</button>
+          <button class="filter-btn" data-filter="devops" type="button">CI/CD</button>
+          <button class="filter-btn" data-filter="web" type="button">Web</button>
+          <button class="filter-btn" data-filter="db" type="button">Базы данных</button>
+        </div>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card" data-category="devops">
+          <h3>Cloud-CICD-Project</h3>
+          <p>Статический веб-сайт с автоматической проверкой и публикацией на GitHub Pages через YAML Workflow.</p>
+          <span class="tag">GitHub Actions</span>
+        </article>
+
+        <article class="project-card" data-category="db">
+          <h3>Учётная система на PostgreSQL</h3>
+          <p>Проектирование схемы базы данных, хранимые процедуры и оптимизация SQL-запросов.</p>
+          <span class="tag">SQL / PostgreSQL</span>
+        </article>
+
+        <article class="project-card" data-category="web">
+          <h3>Интерактивный дашборд</h3>
+          <p>Адаптивный интерфейс на HTML, CSS и JavaScript с фильтрацией данных на стороне клиента.</p>
+          <span class="tag">JavaScript</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="card">
+      <h2>Обратная связь</h2>
+      <form id="contact-form" class="contact-form">
+        <label>
+          Ваше имя
+          <input type="text" id="sender-name" placeholder="Например, Ахан" required />
+        </label>
+        <label>
+          Сообщение
+          <textarea id="sender-msg" rows="3" placeholder="Текст сообщения..." required></textarea>
+        </label>
+        <button type="submit" class="btn-primary">Отправить</button>
+      </form>
+      <p id="form-status" class="form-status" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>Cloud-CICD-Project • Опубликовано автоматически с помощью GitHub Actions</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
